@@ -71,8 +71,29 @@
             background: var(--tg-theme-bg-color);
         }
 
-        botton:hover {
+        button:hover {
             background: var(--tg-theme-bg-color);
+        }
+
+        #form {
+        display: none;
+        text-align: center;
+        }
+
+        input {
+            border: 2px solid silver;
+            border-radius: 5px;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            height: 60px;
+            width: 90%;
+            font-size: 14px;
+            <!--color:  var(&#45;&#45;tg-theme-text-color);
+            background: var(&#45;&#45;tg-theme-bg-color);-->
+            }
+
+        input: focus {
+        border-color: #db5d5d;
         }
 
     </style>
@@ -85,6 +106,29 @@
     <p>CacaTb CYKA</p>
     <button id="buy">Купить</button>
 </div>
+<form id = "form">
+    <input tipe ="text" placeholder="Имя" id ="user_name">
+    <input tipe ="text" placeholder="Email" id ="user_email">
+    <input tipe ="text" placeholder="Телефон" id ="user_phone">
+    <button id="order">Оформить</button>
+</form>
+
+<script src="https://tg.dev/js/telegram-web-app.js?41"></script>
+<script>
+    let tg = window.Telegram.WebApp;
+    let buy = document.getElementById("buy");
+    let order = document.getElementById("order");
+
+    buy.addEventListener("click", () => {
+        document.getElementById("main").style.display = "none";
+        document.getElementById("form").style.display = "block";
+        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name;
+        });
+
+    order.addEventListener("click", () => {
+        tg.close();
+        });
+</script>
 </body>
 
 
