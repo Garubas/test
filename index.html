@@ -43,7 +43,7 @@
 
         h1 {
             margin-top: 50px;
-            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         img {
@@ -88,8 +88,8 @@
             height: 60px;
             width: 90%;
             font-size: 14px;
-            <!--color:  var(&#45;&#45;tg-theme-text-color);
-            background: var(&#45;&#45;tg-theme-bg-color);-->
+            color:  var(&#45;&#45;tg-theme-text-color);
+            background: var(&#45;&#45;tg-theme-bg-color);
             }
 
         input: focus {
@@ -102,7 +102,8 @@
 <body>
 <div id = "main">
 <h1>Онлайн магазин</h1>
-<img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+<!--<img src="&lt;!&ndash;https://cdn-icons-png.flaticon.com/512/3595/3595455.png&ndash;&gt;">-->
+    <img src="https://sun9-3.userapi.com/impf/zU98ZwXLv0Fr6XvT4ba6avuFvVcZ7Xy3gwsyAA/syFDxHoUqwk.jpg?size=956x1280&quality=95&sign=1e21c515ae0317da2add0c3c77a7e576&type=album">
     <p>CacaTb CYKA</p>
     <button id="buy">Купить</button>
 </div>
@@ -136,7 +137,7 @@
         let email = document.getElementById("user_email".value);
         let phone = document.getElementById("user_phone").value;
 
-        if (name.length < 5) {
+       <!-- if (name.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в имени';
             return;
             }
@@ -149,12 +150,12 @@
         if (name.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в номер';
             return;
-            }
+            }-->
 
         let data = {
             name: name,
             email: email,
-            phone: phome,
+            phone: phone,
             }
 
         tg.sendData(JSON.stringify(data));
