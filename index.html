@@ -111,6 +111,8 @@
     <input tipe ="text" placeholder="Email" id ="user_email">
     <input tipe ="text" placeholder="Телефон" id ="user_phone">
     <div id="error"></div>
+    <div id="error2"></div>
+    <div id="error3"></div>
     <button id="order">Оформить</button>
 </form>
 
@@ -142,12 +144,12 @@
             }
 
         else if (email.length < 5) {
-            document.getElementById("error").innerText = 'Ошибка в email';
+            document.getElementById("error2").innerText = 'Ошибка в email';
             return;
             }
 
          else if (name.length < 5) {
-            document.getElementById("error").innerText = 'Ошибка в номере';
+            document.getElementById("error3").innerText = 'Ошибка в номере';
             return;
             }
 
