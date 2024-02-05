@@ -111,8 +111,6 @@
     <input tipe ="text" placeholder="Email" id ="user_email">
     <input tipe ="text" placeholder="Телефон" id ="user_phone">
     <div id="error"></div>
-    <div id="error2"></div>
-    <div id="error3"></div>
     <button id="order">Оформить</button>
 </form>
 
@@ -144,7 +142,7 @@
         //     }
 
         if (email.length < 5) {
-            document.getElementById("error2").innerText = 'Ошибка в email';
+            document.getElementById("error").innerText = 'Ошибка в email';
             return;
             }
 
@@ -153,13 +151,13 @@
         //     return;
         //     }
 
-        // let data = {
-        //     name: name,
-        //     email: email,
-        //     phone: phone,
-        //     }
+        let data = {
+            name: name,
+            email: email,
+            phone: phone,
+            }
 
-        // tg.sendData(JSON.stringify(data));
+        tg.sendData(JSON.stringify(data));
 
         tg.close();
         });
