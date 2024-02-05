@@ -80,7 +80,7 @@
         text-align: center;
         }
 
-        input {
+        /* input {
             border: 2px solid silver;
             border-radius: 5px;
             margin: 10px 5%;
@@ -94,7 +94,7 @@
 
         input: focus {
         border-color: #db5d5d;
-        }
+        } */
 
     </style>
 </head>
@@ -102,7 +102,7 @@
 <body>
 <div id = "main">
 <h1>Онлайн магазин</h1>
-<!--<img src="&lt;!&ndash;https://cdn-icons-png.flaticon.com/512/3595/3595455.png&ndash;&gt;">-->
+<img src="&lt;!&ndash;https://cdn-icons-png.flaticon.com/512/3595/3595455.png&ndash;&gt;">
     <img src="https://sun9-3.userapi.com/impf/zU98ZwXLv0Fr6XvT4ba6avuFvVcZ7Xy3gwsyAA/syFDxHoUqwk.jpg?size=956x1280&quality=95&sign=1e21c515ae0317da2add0c3c77a7e576&type=album">
     <p>CacaTb CYKA</p>
     <button id="buy">Купить</button>
@@ -137,7 +137,7 @@
         let email = document.getElementById("user_email".value);
         let phone = document.getElementById("user_phone").value;
 
-       <!-- if (name.length < 5) {
+        if (name.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в имени';
             return;
             }
@@ -150,13 +150,13 @@
         if (name.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в номер';
             return;
-            }-->
+            }
 
         let data = {
             name: name,
             email: email,
             phone: phone,
-            }
+            };
 
         tg.sendData(JSON.stringify(data));
 
