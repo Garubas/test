@@ -152,7 +152,7 @@
             return;
             }
 
-        if (date.before(currentDate)) {
+        if (date.getTime() < currentDate.getTime()) {
             document.getElementById("error").innerText = 'Ошибка в дате. Дата уже прошла';
             return;
             }
