@@ -135,7 +135,6 @@
         let email = document.getElementById("user_email").value;
         let phone = document.getElementById("user_phone").value;
         let date = document.getElementById("Date").value;
-        let currentDate = new Date();
 
         if (name.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в имени';
@@ -152,10 +151,10 @@
             return;
             }
 
-        if (date.getTime() < currentDate.getTime()) {
-            document.getElementById("error").innerText = 'Ошибка в дате. Дата уже прошла';
-            return;
-            }
+        // if (date.getTime() < new Date().getTime()) {
+        //     document.getElementById("error").innerText = 'Ошибка в дате. Дата уже прошла';
+        //     return;
+        //     }
 
         let data = {
             name: name,
