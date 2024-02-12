@@ -101,11 +101,14 @@
 
 <body>
 <div id = "main">
-<h1>Онлайн магазин</h1>
-    <img src= "https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+<h1>Онлайн-школа английского языка</h1>
+    <img src= "https://assets.stickpng.com/images/580b585b2edbce24c47b2834.png">
     <p>CacaTb CYKA</p>
     <button id="buy">Купить</button>
 </div>
+
+
+
 <form id = "form">
     <input tipe ="text" placeholder="Имя" id ="user_name">
     <input tipe ="text" placeholder="Email" id ="user_email">
@@ -132,6 +135,7 @@
         let email = document.getElementById("user_email").value;
         let phone = document.getElementById("user_phone").value;
         let date = document.getElementById("Date").value;
+        let currentDate = new Date();
 
         if (name.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в имени';
@@ -145,6 +149,11 @@
 
          if (phone.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в номере';
+            return;
+            }
+
+        if (date.before(currentDate)) {
+            document.getElementById("error").innerText = 'Ошибка в дате. Дата уже прошла';
             return;
             }
 
