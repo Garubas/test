@@ -88,8 +88,13 @@
             height: 60px;
             width: 90%;
             font-size: 14px;
-            color:  var(&#45;&#45;tg-theme-text-color);
-            background: var(&#45;&#45;tg-theme-bg-color);
+            background-color: white;
+            background-image: url("https://cdn-icons-png.flaticon.com/512/122/122932.png");
+            background-size: 25px;
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            /* color:  var(&#45;&#45;tg-theme-text-color);
+            background: var(&#45;&#45;tg-theme-bg-color); */
             }
 
         input: focus {
@@ -110,10 +115,16 @@
 
 
 <form id = "form">
-    <input tipe ="text" placeholder="Имя" id ="user_name">
-    <input tipe ="text" placeholder="Email" id ="user_email">
-    <input tipe ="text" placeholder="Телефон" id ="user_phone">
-    <input type="date" name="Date" style="box-sizing: border-box;" id="Date">
+    <label for="user_name">Имя</label>
+    <input type ="text" id ="user_name">
+    <label for="user_email">Email</label>
+    <input type ="email" placeholder="Email" id ="user_email" inputmode="email">
+    <label for="user_phone">Телефон</label>
+    <input type ="phone" placeholder="Телефон" id ="user_phone" inputmode="tel">
+    <label for="Date">Дата</label>
+    <input type="date" name="Date" style="box-sizing: border-box;" id="Date" inputmode="numeric">
+    <label for="Date">Время</label>
+    <input type="time" id="time" name="time">
     <div id="error"></div>
     <button id="order">Оформить</button>
 </form>
@@ -135,6 +146,7 @@
         let email = document.getElementById("user_email").value;
         let phone = document.getElementById("user_phone").value;
         let date = document.getElementById("Date").value;
+        let time = document.getElementById("time").value;
 
         if (name.length < 5) {
             document.getElementById("error").innerText = 'Ошибка в имени';
@@ -160,13 +172,14 @@
             name: name,
             email: email,
             phone: phone,
-            date: date
+            date: date,
+            time: time
             }
 
         tg.sendData(JSON.stringify(data));
         });
 </script>
 
-<script>document.getElementById('Date').valueAsDate = new Date();</script>
+<!-- <script>document.getElementById('Date').valueAsDate = new Date();</script> -->
 </body>
 </html>
