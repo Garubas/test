@@ -1,185 +1,447 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="utf-8">
-    <title>JopaBot</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="MobileOptimized" content="176">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="robots" content="noindex, nofollow">
-    <script src="https://tg.dev/js/telegram-web-app.js?41"></script>
-    <script>
-      function setThemeClass() {
-        document.documentElement.className = Telegram.WebApp.colorScheme;
-      }
-      Telegram.WebApp.onEvent('themeChanged', setThemeClass);
-      setThemeClass();
-    </script>
-    <link href="/css/cafe.css?20" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 200;
-        color:  var(--tg-theme-text-color);
-        background: var(--tg-theme-bg-color);
-        }
-
-        #main {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        img {
-            width: 70px;
-            margin: 30px auto;
-        }
-
-        p {
-            width: 350px;
-            margin: 0px auto;
-        }
-
-        button {
-            border: 0;
-            border-radius: 5px;
-            margin-top: 50px;
-            height: 60px;
-            width: 200px;
-            margin: 30px auto;
-            font-size: 20px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 500ms ease;
-            color:  var(--tg-theme-text-color);
-            background: var(--tg-theme-bg-color);
-        }
-
-        button:hover {
-            background: var(--tg-theme-bg-color);
-        }
-
-        #form {
-        display: none;
-        text-align: center;
-        }
-
-        input {
-            border: 2px solid silver;
-            border-radius: 5px;
-            margin: 10px 5%;
-            padding: 15px 10px;
-            height: 60px;
-            width: 90%;
-            font-size: 14px;
-            background-color: white;
-            background-image: url("https://cdn-icons-png.flaticon.com/512/122/122932.png");
-            background-size: 25px;
-            background-position: 10px 10px; 
-            background-repeat: no-repeat;
-            /* color:  var(&#45;&#45;tg-theme-text-color);
-            background: var(&#45;&#45;tg-theme-bg-color); */
-            }
-
-        input: focus {
-        border-color: #db5d5d;
-        }
-
-    </style>
-</head>
-
-<body>
-<div id = "main">
-<h1>Онлайн-школа английского языка</h1>
-    <img src= "https://assets.stickpng.com/images/580b585b2edbce24c47b2834.png">
-    <p>CacaTb CYKA</p>
-    <button id="buy">Купить</button>
+<html class="dark" style="--tg-theme-accent-text-color: #6ab2f2; --tg-color-scheme: dark; --tg-theme-bg-color: #17212b; --tg-theme-button-color: #5288c1; --tg-theme-button-text-color: #ffffff; --tg-theme-destructive-text-color: #ec3942; --tg-theme-header-bg-color: #17212b; --tg-theme-hint-color: #708499; --tg-theme-link-color: #6ab3f3; --tg-theme-secondary-bg-color: #232e3c; --tg-theme-section-bg-color: #17212b; --tg-theme-section-header-text-color: #6ab3f3; --tg-theme-subtitle-text-color: #708499; --tg-theme-text-color: #f5f5f5; --tg-viewport-height: 576px; --tg-viewport-stable-height: 576px;"><head>
+  <meta charset="utf-8">
+  <title>DurgerKingBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="MobileOptimized" content="176">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="robots" content="noindex, nofollow">
+  <script src="C:\Users\Garubas\Desktop\kal\js\telegram-web-app.js"></script>
+  <script>
+    function setThemeClass() {
+      document.documentElement.className = Telegram.WebApp.colorScheme;
+    }
+    Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+    setThemeClass();
+  </script>
+  <link href="C:\Users\Garubas\Desktop\kal\css\cafe.css" rel="stylesheet">
+<style> ::-webkit-scrollbar { 	border-radius: 5px !important; 	border: 3px solid transparent !important; 	background-color: rgba(255, 255, 255, 0.101961) !important; 	background-clip: content-box !important; 	width: 10px !important; } ::-webkit-scrollbar:hover { 	background-color: rgba(255, 255, 255, 0.172549) !important; } ::-webkit-scrollbar-thumb { 	border-radius: 5px !important; 	border: 3px solid transparent !important; 	background-color: rgba(255, 255, 255, 0.32549) !important; 	background-clip: content-box !important; } ::-webkit-scrollbar-thumb:hover { 	background-color: rgba(255, 255, 255, 0.478431) !important; } </style><style> ::-webkit-scrollbar { 	border-radius: 5px !important; 	border: 3px solid transparent !important; 	background-color: rgba(255, 255, 255, 0.101961) !important; 	background-clip: content-box !important; 	width: 10px !important; } ::-webkit-scrollbar:hover { 	background-color: rgba(255, 255, 255, 0.172549) !important; } ::-webkit-scrollbar-thumb { 	border-radius: 5px !important; 	border: 3px solid transparent !important; 	background-color: rgba(255, 255, 255, 0.32549) !important; 	background-clip: content-box !important; } ::-webkit-scrollbar-thumb:hover { 	background-color: rgba(255, 255, 255, 0.478431) !important; } </style></head>
+<body style="" class="">
+  <section class="cafe-page cafe-items" style="">
+  <div class="cafe-item js-item selected" data-item-id="1" data-item-price="4990">
+  <div class="cafe-item-counter js-item-counter" style="animation-name: badge-show;">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Burger.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Burger</span>
+    <span class="cafe-item-price">$4.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple" style="transform: translate3d(-2.4px, 5px, 0px) scale3d(1, 1, 1); opacity: 0; transition-duration: var(--ripple-end-duration, .2s);"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="2" data-item-price="1490">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Fries.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Fries</span>
+    <span class="cafe-item-price">$1.49</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item selected" data-item-id="3" data-item-price="3490">
+  <div class="cafe-item-counter js-item-counter" style="animation-name: badge-incr;">2</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Hotdog.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Hotdog</span>
+    <span class="cafe-item-price">$3.49</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple" style="transform: translate3d(3px, 0px, 0px) scale3d(1, 1, 1); opacity: 0; transition-duration: var(--ripple-end-duration, .2s);"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple" style="transform: translate3d(0px, 9px, 0px) scale3d(1, 1, 1); opacity: 0; transition-duration: var(--ripple-end-duration, .2s);"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="4" data-item-price="3990">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Tako.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Taco</span>
+    <span class="cafe-item-price">$3.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="5" data-item-price="7990">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Pizza.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Pizza</span>
+    <span class="cafe-item-price">$7.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item selected" data-item-id="6" data-item-price="1490">
+  <div class="cafe-item-counter js-item-counter" style="animation-name: badge-show;">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Donut.tgs?1">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Donut</span>
+    <span class="cafe-item-price">$1.49</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple" style="transform: translate3d(16px, -14px, 0px) scale3d(1, 1, 1); opacity: 0; transition-duration: var(--ripple-end-duration, .2s);"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="7" data-item-price="1990">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Popcorn.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Popcorn</span>
+    <span class="cafe-item-price">$1.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="8" data-item-price="1490">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Coke.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Coke</span>
+    <span class="cafe-item-price">$1.49</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="9" data-item-price="10990">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Cake.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Cake</span>
+    <span class="cafe-item-price">$10.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="10" data-item-price="5990">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Icecream.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Icecream</span>
+    <span class="cafe-item-price">$5.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item selected" data-item-id="11" data-item-price="3990">
+  <div class="cafe-item-counter js-item-counter" style="animation-name: badge-show;">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Cookie.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Cookie</span>
+    <span class="cafe-item-price">$3.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple" style="transform: translate3d(-7.2px, 2.79999px, 0px) scale3d(1, 1, 1); opacity: 0; transition-duration: var(--ripple-end-duration, .2s);"></span></span>
+    </button>
+  </div>
+</div>  <div class="cafe-item js-item" data-item-id="12" data-item-price="7990">
+  <div class="cafe-item-counter js-item-counter">1</div>
+  <div class="cafe-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Flan.tgs">
+      
+    <canvas width="92" height="92"></canvas></picture>
+  </div>
+  <div class="cafe-item-label">
+    <span class="cafe-item-title">Flan</span>
+    <span class="cafe-item-price">$7.99</span>
+  </div>
+  <div class="cafe-item-buttons">
+    <button class="cafe-item-decr-button js-item-decr-btn button-item ripple-handler">
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+    <button class="cafe-item-incr-button js-item-incr-btn button-item ripple-handler">
+      <span class="button-item-label">Add</span>
+      <span class="ripple-mask"><span class="ripple"></span></span>
+    </button>
+  </div>
+</div><div class="cafe-item-shadow"></div><div class="cafe-item-shadow"></div><div class="cafe-item-shadow"></div><div class="cafe-item-shadow"></div>
+</section>
+<section class="cafe-page cafe-order-overview" style="display: none;">
+<div class="cafe-block">
+  <div class="cafe-order-header-wrap">
+    <h2 class="cafe-order-header">Your Order</h2>
+    <span class="cafe-order-edit js-order-edit">Edit</span>
+  </div>
+  <div class="cafe-order-items">
+      <div class="cafe-order-item js-order-item selected" data-item-id="1">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Burger.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Burger <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Meat™</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$4.99</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="2">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Fries.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Fries <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Po-ta-toes</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$1.49</div>
+</div>  <div class="cafe-order-item js-order-item selected" data-item-id="3">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Hotdog.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Hotdog <span class="cafe-order-item-counter"><span class="js-order-item-counter">2</span>x</span></div>
+    <div class="cafe-order-item-description">0% dog, 100% hot</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$6.98</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="4">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Tako.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Taco <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Mucho más</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$3.99</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="5">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Pizza.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Pizza <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">That’s amore</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$7.99</div>
+</div>  <div class="cafe-order-item js-order-item selected" data-item-id="6">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Donut.tgs?1">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Donut <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Hole included</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$1.49</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="7">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Popcorn.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Popcorn <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Lights, camera, corn</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$1.99</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="8">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Coke.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Coke <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">The liquid kind</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$1.49</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="9">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Cake.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Cake <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Bread substitute</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$10.99</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="10">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Icecream.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Icecream <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Cone of shame</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$5.99</div>
+</div>  <div class="cafe-order-item js-order-item selected" data-item-id="11">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Cookie.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Cookie <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Milk’s favorite</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$3.99</div>
+</div>  <div class="cafe-order-item js-order-item" data-item-id="12">
+  <div class="cafe-order-item-photo">
+          <picture class="cafe-item-lottie js-item-lottie">
+      <source type="application/x-tgsticker" srcset="/img/cafe/Flan.tgs">
+      
+    <canvas width="320" height="320"></canvas></picture>
+  </div>
+  <div class="cafe-order-item-label">
+    <div class="cafe-order-item-title">Flan <span class="cafe-order-item-counter"><span class="js-order-item-counter">1</span>x</span></div>
+    <div class="cafe-order-item-description">Flan-tastic</div>
+  </div>
+  <div class="cafe-order-item-price js-order-item-price">$7.99</div>
 </div>
+  </div>
+</div>
+<div class="cafe-text-field-wrap">
+  <textarea class="cafe-text-field js-order-comment-field cafe-block" rows="1" placeholder="Add comment…" style="overflow: hidden; overflow-wrap: break-word; height: 46px;"></textarea>
+  <div class="cafe-text-field-hint">
+    Any special requests, details, final wishes etc.
+  </div>
+</div>
+</section>
+<div class="cafe-status-wrap">
+<div class="cafe-status js-status">Payment has been failed.</div>
+</div>
+  <script src="https://tg.dev/js/jquery.min.js"></script>
+  <script src="https://tg.dev/js/tgsticker.js?31"></script>
+  <script src="/js/cafe.js?29"></script>
+  <script>Cafe.init({"apiUrl":"\/cafe\/api","mode":null,"userId":766223938,"userHash":"5c60f0776e979d6ece"});</script>
 
 
 
-<form id = "form">
-    <label for="user_name">Имя</label>
-    <input type ="text" id ="user_name">
-    <label for="user_email">Email</label>
-    <input type ="email" placeholder="Email" id ="user_email" inputmode="email">
-    <label for="user_phone">Телефон</label>
-    <input type ="phone" placeholder="Телефон" id ="user_phone" inputmode="tel">
-    <label for="Date">Дата</label>
-    <input type="date" name="Date" style="box-sizing: border-box;" id="Date" inputmode="numeric">
-    <label for="Date">Время</label>
-    <input type="time" id="time" name="time">
-    <div id="error"></div>
-    <button id="order">Оформить</button>
-</form>
-
-<script>
-    let tg = window.Telegram.WebApp;
-    let buy = document.getElementById("buy");
-    let order = document.getElementById("order");
-
-    buy.addEventListener("click", () => {
-        document.getElementById("main").style.display = "none";
-        document.getElementById("form").style.display = "block";
-        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name;
-        });
-
-    order.addEventListener("click", () => {
-
-        let name = document.getElementById("user_name").value;
-        let email = document.getElementById("user_email").value;
-        let phone = document.getElementById("user_phone").value;
-        let date = document.getElementById("Date").value;
-        let time = document.getElementById("time").value;
-
-        if (name.length < 5) {
-            document.getElementById("error").innerText = 'Ошибка в имени';
-            return;
-            }
-
-        if (email.length < 5) {
-            document.getElementById("error").innerText = 'Ошибка в email';
-            return;
-            }
-
-         if (phone.length < 5) {
-            document.getElementById("error").innerText = 'Ошибка в номере';
-            return;
-            }
-
-        // if (date.getTime() < new Date().getTime()) {
-        //     document.getElementById("error").innerText = 'Ошибка в дате. Дата уже прошла';
-        //     return;
-        //     }
-
-        let data = {
-            name: name,
-            email: email,
-            phone: phone,
-            date: date,
-            time: time
-            }
-
-        tg.sendData(JSON.stringify(data));
-        });
-</script>
-
-<!-- <script>document.getElementById('Date').valueAsDate = new Date();</script> -->
-</body>
-</html>
+</body></html>
