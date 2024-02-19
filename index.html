@@ -10,7 +10,7 @@
     <meta name="MobileOptimized" content="176">
     <meta name="HandheldFriendly" content="True">
     <meta name="robots" content="noindex, nofollow">
-    <script src="https://tg.dev/js/telegram-web-app.js?41"></script>
+    <script src="https://tg.dev/js/telegram-web-app.js"></script>
     <script>
       function setThemeClass() {
         document.documentElement.className = Telegram.WebApp.colorScheme;
@@ -18,7 +18,6 @@
       Telegram.WebApp.onEvent('themeChanged', setThemeClass);
       setThemeClass();
     </script>
-    <link href="/css/cafe.css?20" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
 
@@ -31,8 +30,10 @@
         body {
         font-family: 'Montserrat', sans-serif;
         font-weight: 200;
-        color:  var(--tg-theme-text-color);
-        background: var(--tg-theme-bg-color);
+        color: #e33a83;
+        background: #f0bebe;
+        /* color:  var(--tg-theme-text-color);
+        background: var(--tg-theme-bg-color); */
         }
 
         #main {
@@ -43,22 +44,24 @@
 
         h1 {
             margin-top: 50px;
-            margin-bottom: 50px;
+            margin-bottom: 0px;
         }
 
         img {
-            width: 70px;
-            margin: 30px auto;
+            width: 300px;
+            margin: 10px auto;
         }
 
         p {
             width: 350px;
-            margin: 0px auto;
+            font-size: large;
+            font-family:'Lucida Sans Regular',  'Lucida Sans Unicode', Verdana;
+            margin: 10px auto;
         }
 
         button {
-            border: 0;
-            border-radius: 5px;
+            border: 5;
+            border-radius: 100px;
             margin-top: 50px;
             height: 60px;
             width: 200px;
@@ -75,26 +78,28 @@
             background: var(--tg-theme-bg-color);
         }
 
+
         #form {
         display: none;
         text-align: center;
         }
 
         input {
-            border: 2px solid silver;
+            border: 2px solid rgb(223, 213, 213);
             border-radius: 5px;
             margin: 10px 5%;
             padding: 15px 10px;
+            text-size-adjust: auto;
             height: 60px;
-            width: 90%;
-            font-size: 14px;
-            background-color: white;
-            background-image: url("https://cdn-icons-png.flaticon.com/512/122/122932.png");
-            background-size: 25px;
-            background-position: 10px 10px; 
-            background-repeat: no-repeat;
-            /* color:  var(&#45;&#45;tg-theme-text-color);
-            background: var(&#45;&#45;tg-theme-bg-color); */
+            width: 50%;
+            font-size: 30px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(255, 219, 219);
+            background-size: auto;
+            background-position: 0; 
+            background-repeat: repeat;
+            color:  var(&#45;&#45;tg-theme-text-color);
+            background: var(&#45;&#45;tg-theme-bg-color);
             }
 
         input: focus {
@@ -106,25 +111,20 @@
 
 <body>
 <div id = "main">
-<h1>Онлайн-школа английского языка</h1>
-    <img src= "https://assets.stickpng.com/images/580b585b2edbce24c47b2834.png">
-    <p>CacaTb CYKA</p>
-    <button id="buy">Купить</button>
+<h1>English & Tea</h1>
+    <img src= "C:\Users\Garubas\Desktop\академия\pngwing.com.png">
+    <p>Школа английского языка</p>
+    <button id="buy">Бесплатная консультация</button>
 </div>
 
 
 
 <form id = "form">
-    <label for="user_name">Имя</label>
-    <input type ="text" id ="user_name">
-    <label for="user_email">Email</label>
-    <input type ="email" placeholder="Email" id ="user_email" inputmode="email">
-    <label for="user_phone">Телефон</label>
-    <input type ="phone" placeholder="Телефон" id ="user_phone" inputmode="tel">
-    <label for="Date">Дата</label>
-    <input type="date" name="Date" style="box-sizing: border-box;" id="Date" inputmode="numeric">
-    <label for="Date">Время</label>
-    <input type="time" id="time" name="time">
+    <input type ="text" id ="user_name"><br>
+    <input type ="email" placeholder="Email" id ="user_email" inputmode="email"><br>
+    <input type ="phone" placeholder="Телефон" id ="user_phone" inputmode="tel"><br>
+    <input type="date" name="Date" style="box-sizing: border-box;" id="Date" inputmode="numeric"><br>
+    <input type="time" id="time" name="time"><br>
     <div id="error"></div>
     <button id="order">Оформить</button>
 </form>
@@ -162,11 +162,6 @@
             document.getElementById("error").innerText = 'Ошибка в номере';
             return;
             }
-
-        // if (date.getTime() < new Date().getTime()) {
-        //     document.getElementById("error").innerText = 'Ошибка в дате. Дата уже прошла';
-        //     return;
-        //     }
 
         let data = {
             name: name,
