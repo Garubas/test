@@ -123,11 +123,11 @@
 
 
 <form id = "form">
-    <input type ="text" id ="user_name"><br>
+    <input type ="text" placeholder="Имя" id ="user_name"><br>
     <input type ="email" placeholder="Email" id ="user_email" inputmode="email"><br>
     <input type ="phone" placeholder="Телефон" id ="user_phone" inputmode="tel"><br>
-    <input type="date" name="Date" style="box-sizing: border-box;" id="Date" inputmode="numeric" min = "2000-02-12"><br>
-    <input type="time" id="time" name="time"><br>
+    <input type="date" name="Date" style="box-sizing: border-box;" id="Date" inputmode="numeric" min = "2000-02-12" max = "2030-02-12"><br>
+    <input type="time" id="time" min="12:00" max="22:00" name="time"><br>
     <div id="error"></div>
     <button id="order">Оформить</button>
 </form>
@@ -166,6 +166,16 @@
             return;
             }
 
+        if (date.length < 5) {
+            document.getElementById("error").innerText = 'Ошибка в дате';
+            return;
+            }
+
+        if (time.length < 5) {
+            document.getElementById("error").innerText = 'Ошибка во времени';
+            return;
+            }
+
         let data = {
             name: name,
             email: email,
@@ -181,9 +191,64 @@
 <script>
         let currentDate = new Date();
         let stringDate = currentDate.toLocaleDateString();
-        let minDate = stringDate.substring(6, 11) + "-" + stringDate.substring(3, 5) + "-" + stringDate.substring(0, 2);
+        let day = stringDate.substring(0, 2);
+        let month = stringDate.substring(3, 5);
+        let year = stringDate.substring(6, 11);
+        let nextMonth = "12";
+        switch(month) {
+            case ("01"): {
+                nextMonth = "02"
+                break
+            }
+            case ("02"): {
+                nextMonth = "03"
+                break
+            }
+            case ("03"): {
+                nextMonth = "04"
+                break
+            }
+            case ("04"): {
+                nextMonth = "05"
+                break
+            }
+            case ("05"): {
+                nextMonth = "06"
+                break
+            }
+            case ("06"): {
+                nextMonth = "07"
+                break
+            }
+            case ("07"): {
+                nextMonth = "08"
+                break
+            }
+            case ("08"): {
+                nextMonth = "09"
+                break
+            }
+            case ("09"): {
+                nextMonth = "10"
+                break
+            }
+            case ("10"): {
+                nextMonth = "11"
+                break
+            }
+            case ("11"): {
+                nextMonth = "12"
+                break
+            }
+            default: {
+                nextMonth = "12"
+            }
+        };
+        let minDate = year + "-" + month + "-" + day;
+        let maxDate = year + "-" + nextMonth + "-" + day;
         document.getElementById('Date').valueAsDate = currentDate;
         document.getElementById('Date').setAttribute("min", minDate);
+        document.getElementById('Date').setAttribute("max", maxDate);
 </script>
 </body>
 </html>
