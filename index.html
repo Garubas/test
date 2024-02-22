@@ -144,7 +144,7 @@
         });
 
     order.addEventListener("click", () => {
-
+        event.preventDefault();
         let name = document.getElementById("user_name").value;
         let email = document.getElementById("user_email").value;
         let phone = document.getElementById("user_phone").value;
@@ -189,66 +189,90 @@
 </script>
 
 <script>
+        // let currentDate = new Date();
+        // let stringDate = currentDate.toLocaleDateString();
+        // let day = stringDate.substring(0, 2);
+        // let month = stringDate.substring(3, 5);
+        // let year = stringDate.substring(6, 11);
+        // const mon = currentDate
+        // let nextMonth = "12";
+        // switch(month) {
+        //     case "01": 
+        //         nextMonth = "02"
+        //         break
+        //     case "02":
+        //         nextMonth = "03"
+        //         break
+        //     case "03": 
+        //         nextMonth = "04"
+        //         break
+        //     case ("04"): {
+        //         nextMonth = "05"
+        //         break
+        //     }
+        //     case ("05"): {
+        //         nextMonth = "06"
+        //         break
+        //     }
+        //     case ("06"): {
+        //         nextMonth = "07"
+        //         break
+        //     }
+        //     case ("07"): {
+        //         nextMonth = "08"
+        //         break
+        //     }
+        //     case ("08"): {
+        //         nextMonth = "09"
+        //         break
+        //     }
+        //     case ("09"): {
+        //         nextMonth = "10"
+        //         break
+        //     }
+        //     case ("10"): {
+        //         nextMonth = "11"
+        //         break
+        //     }
+        //     case ("11"): {
+        //         nextMonth = "12"
+        //         break
+        //     }
+        //     default: {
+        //         nextMonth = "12"
+        //     }
+        // };
+        // let minDate = year + "-" + month + "-" + day;
+        // let maxDate = year + "-" + nextMonth + "-" + day;
+        // document.getElementById('Date').valueAsDate = currentDate;
+        // let secDate = document.getElementById("Date").value;
+        // let newDate = new Date().setMonth(currentDate.getMonth() + 1);
+        // console.log(currentDate)
+        // console.log(newDate)
+        // let newNewDate = new Date(newDate);
+        // document.getElementById('Date').valueAsDate = newNewDate;
+        // console.log()
+        // document.getElementById('Date').setAttribute("min", secDate);
+        // document.getElementById('Date').setAttribute("max", newNewDate);
+
+        
         let currentDate = new Date();
-        let stringDate = currentDate.toLocaleDateString();
-        let day = stringDate.substring(0, 2);
-        let month = stringDate.substring(3, 5);
-        let year = stringDate.substring(6, 11);
-        let nextMonth = "12";
-        switch(month) {
-            case ("01"): {
-                nextMonth = "02"
-                break
-            }
-            case ("02"): {
-                nextMonth = "03"
-                break
-            }
-            case ("03"): {
-                nextMonth = "04"
-                break
-            }
-            case ("04"): {
-                nextMonth = "05"
-                break
-            }
-            case ("05"): {
-                nextMonth = "06"
-                break
-            }
-            case ("06"): {
-                nextMonth = "07"
-                break
-            }
-            case ("07"): {
-                nextMonth = "08"
-                break
-            }
-            case ("08"): {
-                nextMonth = "09"
-                break
-            }
-            case ("09"): {
-                nextMonth = "10"
-                break
-            }
-            case ("10"): {
-                nextMonth = "11"
-                break
-            }
-            case ("11"): {
-                nextMonth = "12"
-                break
-            }
-            default: {
-                nextMonth = "12"
-            }
-        };
-        let minDate = year + "-" + month + "-" + day;
-        let maxDate = year + "-" + nextMonth + "-" + day;
         document.getElementById('Date').valueAsDate = currentDate;
+        let minDate = document.getElementById("Date").value;
+        let newDate = new Date().setMonth(currentDate.getMonth() + 1);
+        let newNewDate = new Date(newDate);
+        document.getElementById('Date').valueAsDate = newNewDate;
+        let maxDate = document.getElementById("Date").value;
+        document.getElementById('Date').valueAsDate = currentDate;
+
         document.getElementById('Date').setAttribute("min", minDate);
         document.getElementById('Date').setAttribute("max", maxDate);
+
+
+
+
+
+
 </script>
 </body>
 </html>
